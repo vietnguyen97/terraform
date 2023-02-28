@@ -1,14 +1,17 @@
 provider "aws" {
-  region = "ap-southeast-1"
+  region = var.REGION
+  #   access_key = ""
+  #   secret_key = ""
 }
 
 resource "aws_instance" "terraform-name" {
-  ami                       = "ami-04e6897ac54e2870f"
+  ami                       = var.AMI[var.REGION]
   instance_type             = "t2.micro"
-  availability_zone         = "ap-southeast-1"
+  availability_zone         = var.REGION_SUB
   key_name                  = "deployer-key-terraform"
   vpc_security_group_ids    = ["sg-02d80deb4c72bb144"]   
   tags = {
-    "Name" = "staging-pj"
+    Name = "staging-pj"
+    Project = "staging"
   }
 }
