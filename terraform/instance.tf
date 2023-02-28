@@ -1,9 +1,3 @@
-provider "aws" {
-  region = var.REGION
-  #   access_key = ""
-  #   secret_key = ""
-}
-
 resource "aws_instance" "terraform-name" {
   ami                       = var.AMI[var.REGION]
   instance_type             = "t2.micro"
