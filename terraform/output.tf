@@ -1,7 +1,7 @@
 output "PublicIP" {
-  value = aws_instance.aws_instance.public_ip
+  value = aws_instance.terraform-name.public_ip
 }
 
 output "PrivateIP" {
-  value = aws_instance.aws_instance.private_ip
+  value = aws_instance.terraform-name.private_ip
 }
