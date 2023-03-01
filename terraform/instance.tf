@@ -1,3 +1,8 @@
+resource "aws_key_pair" "deployer" {
+  key_name   = "deployer-key-terraform"
+  public_key = file(var.PUB_KEY)
+}
+
 resource "aws_instance" "terraform-name" {
   ami                    = var.AMI[var.REGION]
   instance_type          = "t2.micro"
