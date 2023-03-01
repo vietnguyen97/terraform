@@ -40,7 +40,7 @@ resource "aws_subnet" "public-subnet-2" {
 
 resource "aws_subnet" "private-subnet-1" {
   vpc_id                  = aws_vpc.staging-vpc.id
-  cidr_block              = "0.0.0.0/32"
+  cidr_block              = "0.0.0.0/0"
   map_public_ip_on_launch = "true"
   availability_zone       = "ap-southeast-1a"
   tags = {
@@ -50,7 +50,7 @@ resource "aws_subnet" "private-subnet-1" {
  
 resource "aws_subnet" "private-subnet-2" {
   vpc_id                  = aws_vpc.staging-vpc.id
-  cidr_block              = "1.0.0.0/32"
+  cidr_block              = "255.255.255.255/255"
   map_public_ip_on_launch = "true"
   availability_zone       = "ap-southeast-1b"
   tags = {
