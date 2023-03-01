@@ -12,3 +12,11 @@ variable "AMI" {
     ap-southeast-1 = "ami-0f2eac25772cd4e36"
   }
 }
+
+variable PUB_KEY {
+  default = "stagingkey.pub"
+}
+
+variable PRIV_KEY {
+  default = "stagingkey"
+}
