@@ -4,7 +4,7 @@ resource "aws_key_pair" "deployer" {
 }
 
 resource "aws_instance" "terraform-name" {
-  ami                       = var.AMI[var.REGION]
+  ami                       = var.AMIS[var.REGION]
   instance_type             = "t2.micro"
   subnet_id                 = aws_subnet.public-subnet-1.id
   availability_zone         = var.REGION_SUB
