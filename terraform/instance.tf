@@ -11,7 +11,7 @@ resource "aws_instance" "terraform-name" {
   key_name                  = "deployer-key-terraform"
   vpc_security_group_ids    = ["sg-02d80deb4c72bb144"]   
   tags = {
-    Name = "staging-pj"
+    Name    = "staging-pj"
     Project = "staging"
   }
 }

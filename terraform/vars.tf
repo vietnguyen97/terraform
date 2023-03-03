@@ -13,10 +13,10 @@ variable "AMIS" {
   }
 }
 
-variable PUB_KEY {
+variable "PUB_KEY" {
   default = "stagingkey.pub"
 }
 
-variable PRIV_KEY {
+variable "PRIV_KEY" {
   default = "stagingkey"
 }
